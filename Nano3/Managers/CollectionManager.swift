@@ -17,17 +17,21 @@ struct MusicItem: Identifiable, Hashable {
     let imageUrl: URL?
 }
 
-struct AlbumItem: Hashable {
+struct AlbumItem: Hashable, Comparable {
     let name: String
     let genres: [String]
     let imageUrl: URL?
     let artist: String
     var rating: CGFloat
+    
+    static func <(lhs: AlbumItem, rhs: AlbumItem) -> Bool {
+        return lhs.name < rhs.name
+    }
 }
 
 struct CollectionItem {
     let name: String
-    var albuns: [AlbumItem]
+    var albuns: Set<AlbumItem>
 }
 
 class CollectionManager: ObservableObject {

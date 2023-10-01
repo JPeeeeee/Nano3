@@ -95,7 +95,7 @@ struct NewAlbumModal: View {
                     if !collectionManager.collections[collectionManager.currentColletion]!.albuns.contains(where: {
                         $0.name == name
                     }) {
-                        collectionManager.collections[collectionManager.currentColletion]?.albuns.append(AlbumItem(name: albumName, genres: [], imageUrl: imageUrl, artist: artist, rating: rating))
+                        collectionManager.collections[collectionManager.currentColletion]?.albuns.insert(AlbumItem(name: albumName, genres: [], imageUrl: imageUrl, artist: artist, rating: rating))
                     }
                     
                     print(String(describing: collectionManager.collections))

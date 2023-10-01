@@ -10,11 +10,11 @@ import SwiftUI
 struct SelectedCollectionView: View {
     
     var name = "Pop"
-    var albuns: [AlbumItem] = []
+    var albuns: Set<AlbumItem> = Set<AlbumItem>()
     
     @EnvironmentObject var collectionManager: CollectionManager
     
-    @State var currentAlbumArr: [AlbumItem] = [AlbumItem]()
+    @State var currentAlbumArr: Set<AlbumItem> = Set<AlbumItem>()
     
     private let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -46,18 +46,21 @@ struct SelectedCollectionView: View {
                 .padding()
                 
                 LazyVGrid(columns: columns) {
-                    ForEach(0..<currentAlbumArr.count, id: \.self) { i in
-                        AlbumCard(rating: currentAlbumArr[i].rating, albumName: currentAlbumArr[i].name, imageUrl: currentAlbumArr[i].imageUrl, artist: currentAlbumArr[i].artist, cardIndex: i)
+                    ForEach(currentAlbumArr.sorted(by: <), id: \.self) { element in
+                        AlbumCard(rating: element.rating, albumName: element.name, imageUrl: element.imageUrl, artist: element.artist)
                     }
-                    AlbumCard(rating: 0.0, artist: "artista", cardIndex: 0)
                 }
                 .padding()
+                
                 Spacer()
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             collectionManager.currentColletion = name
+            currentAlbumArr = collectionManager.collections[collectionManager.currentColletion]!.albuns
+        }
+        .onChange(of: collectionManager.collections[collectionManager.currentColletion]?.albuns) { newValue in
             currentAlbumArr = collectionManager.collections[collectionManager.currentColletion]!.albuns
         }
 //        .toolbar {

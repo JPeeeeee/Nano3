@@ -13,6 +13,8 @@ struct CollectionCard: View {
     var collectionItem: CollectionItem = CollectionItem(name: "Hip Hop", albuns: [])
     var backgroundColor: Color = .gray
     
+    @EnvironmentObject var collectionManager: CollectionManager
+    
     var body: some View {
         NavigationLink {
             SelectedCollectionView(name: collectionItem.name, albuns: collectionItem.albuns)
@@ -33,6 +35,13 @@ struct CollectionCard: View {
             }
             .frame(maxWidth: 200, minHeight: 200)
             .cornerRadius(10)
+            .contextMenu(menuItems: {
+                Button (role: .destructive) {
+                    collectionManager.collections.removeValue(forKey: collectionItem.name)
+                } label: {
+                    Text("Delete")
+                }
+            })
         }
         
     }

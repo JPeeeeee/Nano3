@@ -41,7 +41,7 @@ struct HomeView: View {
                     LazyVGrid(columns: columns) {
                         
                         ForEach(Array(collectionManager.collections.keys.enumerated()), id: \.element) { i, value in
-                            CollectionCard(collectionItem: collectionManager.collections[value] ?? CollectionItem(name: "Fodase", albuns: []), backgroundColor: Color(colors[i % 5]))
+                            CollectionCard(collectionItem: collectionManager.collections[value] ?? CollectionItem(name: "Error", albuns: []), backgroundColor: Color(colors[i % 5]))
                         }
                     }
                 }
@@ -67,9 +67,9 @@ struct HomeView: View {
         }
         .preferredColorScheme(.dark)
         .overlay {
-//            if startAnimation {
-//                SplashView()
-//            }
+            if startAnimation {
+                SplashView()
+            }
         }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {

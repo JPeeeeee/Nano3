@@ -18,74 +18,76 @@ struct AlbumCard: View {
     var albumName = "Yefdsajkfhasdjkfhdajskfhadsjk"
     var imageUrl = URL(string: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0c/06/05/0c060581-6242-6a2a-a677-20170f2cf8da/886447710180.jpg/1000x1000bb.jpg")
     var artist: String
-    var cardIndex: Int
     
     var body: some View {
-            
-        VStack {
-            AsyncImage(url: imageUrl) { Image in
-                Image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            } placeholder: {
-                Color.gray
-                    .frame(maxWidth: 200, maxHeight: 200)
-            }
-            
-            VStack (alignment: .leading){
-                HStack {
-                    Text(albumName)
-                        .foregroundColor(.black)
-                        .fontWeight(.black)
-                        .padding(.horizontal)
-                        .padding(.bottom, 8)
-                        .multilineTextAlignment(.leading)
-                    
-                    Spacer()
+        ZStack {
+            VStack {
+                AsyncImage(url: imageUrl) { Image in
+                    Image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } placeholder: {
+                    Color.gray
+                        .frame(maxWidth: 200, maxHeight: 200)
                 }
                 
-                HStack {
-                    ForEach(0..<Int(rating / 2), id: \.self) {_ in
-                        Image(systemName: "star.fill")
+                VStack (alignment: .leading){
+                    HStack {
+                        Text(albumName)
+                            .foregroundColor(.black)
+                            .fontWeight(.black)
+                            .padding(.horizontal)
+                            .padding(.bottom, 8)
+                            .multilineTextAlignment(.leading)
+                        
+                        Spacer()
                     }
                     
-                    if rating.truncatingRemainder(dividingBy: 1) > 0 {
-                        Image(systemName: "star.leadinghalf.filled")
-                        
-                        ForEach(0..<4-Int(rating / 2), id: \.self) { _ in
-                            Image(systemName: "star")
+                    HStack {
+                        ForEach(0..<Int(rating / 2), id: \.self) {_ in
+                            Image(systemName: "star.fill")
                         }
-                    } else {
-                        ForEach(0..<5-Int(rating / 2), id: \.self) { _ in
-                            Image(systemName: "star")
+                        
+                        if rating.truncatingRemainder(dividingBy: 1) > 0 {
+                            Image(systemName: "star.leadinghalf.filled")
+                            
+                            ForEach(0..<4-Int(rating / 2), id: \.self) { _ in
+                                Image(systemName: "star")
+                            }
+                        } else {
+                            ForEach(0..<5-Int(rating / 2), id: \.self) { _ in
+                                Image(systemName: "star")
+                            }
                         }
                     }
+                    .padding(.horizontal)
+                    .foregroundStyle(.black)
+                    .font(.caption)
                 }
-                .padding(.horizontal)
-                .foregroundStyle(.black)
-                .font(.caption)
+                .padding(.vertical)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-            .padding(.vertical)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-        }
-        .background(.white)
-        .cornerRadius(10)
-        .onTapGesture {
-            navigationIsActive.toggle()
-        }
-        .onAppear {
-            navigationIsActive = false
-        }
-        .contextMenu(ContextMenu(menuItems: {
-            Button (role: .destructive){
-                collectionManager.collections[collectionManager.currentColletion]!.albuns.remove(at: cardIndex)
-            } label: {
-                Text("Delete")
+            .background(.white)
+            .cornerRadius(10)
+            .onTapGesture {
+                navigationIsActive.toggle()
             }
-
-        }))
-        
-        NavigationLink("", destination: AlbumDetailView(rating: $rating, albumName: albumName, imageUrl: imageUrl, artist: artist), isActive: $navigationIsActive)
+            .onAppear {
+                navigationIsActive = false
+            }
+            .contextMenu(ContextMenu(menuItems: {
+                Button (role: .destructive){
+                    collectionManager.collections[collectionManager.currentColletion]!.albuns.remove(AlbumItem(name: albumName, genres: [], imageUrl: imageUrl, artist: artist, rating: rating))
+                    
+                    print(collectionManager.collections[collectionManager.currentColletion]!.albuns)
+                } label: {
+                    Text("Delete")
+                }
+            }))
+            
+            NavigationLink("", destination: AlbumDetailView(rating: $rating, albumName: albumName, imageUrl: imageUrl, artist: artist), isActive: $navigationIsActive)
+        }
+        .padding(.bottom)
     }
 }
 
