@@ -65,9 +65,6 @@ struct NewAlbumModal: View {
             VStack {
                 Text("Rate the album:")
                 
-                Slider(value: $rating, in: 0...10)
-                    .padding(.horizontal)
-                
                 HStack {
                     ForEach(0..<Int(rating / 2), id: \.self) {_ in
                         Image(systemName: "star.fill")
@@ -85,6 +82,10 @@ struct NewAlbumModal: View {
                         }
                     }
                 }
+                .padding()
+                
+                Slider(value: $rating, in: 0...10)
+                    .padding(.horizontal, 32)
                 
                 Spacer()
                 

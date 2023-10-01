@@ -34,7 +34,7 @@ struct HomeView: View {
                     HStack {
                         Text("Welcome!")
                             .font(.title)
-                            .bold()
+                            .fontWeight(.black)
                         Spacer()
                     }
                     
@@ -67,9 +67,9 @@ struct HomeView: View {
         }
         .preferredColorScheme(.dark)
         .overlay {
-            if startAnimation {
-                SplashView()
-            }
+//            if startAnimation {
+//                SplashView()
+//            }
         }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {

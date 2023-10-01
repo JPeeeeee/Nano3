@@ -39,7 +39,7 @@ struct SearchModal: View {
                     let request = MusicCatalogSearchRequest(term: term, types: [Song.self])
                     let result = try await request.response()
                     self.songs = result.songs.map({
-                        return .init(name: $0.title, artist: $0.artistName, albumTitle: $0.albumTitle, genreNames: $0.genreNames, imageUrl: $0.artwork?.url(width: 200, height: 200))
+                        return .init(name: $0.title, artist: $0.artistName, albumTitle: $0.albumTitle, genreNames: $0.genreNames, imageUrl: $0.artwork?.url(width: 1000, height: 1000))
                     })
                     print(String(describing: songs))
                 } catch {
@@ -83,19 +83,19 @@ struct SearchModal: View {
                             )
                         }
                     }
-                    
-                    SearchCard(albumName: "teste", name: "teste", artist: "teste", imageUrl: URL(string: ""), showNewModal: $showNewModal,
-                               cardAlbumName: $cardAlbumName,
-                               cardSongName: $cardSongName,
-                               cardArtist: $cardArtist,
-                               cardImageUrl: $cardImageUrl
-                    )
-                    SearchCard(albumName: "teste2", name: "teste2", artist: "teste2", imageUrl: URL(string: ""), showNewModal: $showNewModal,
-                               cardAlbumName: $cardAlbumName,
-                               cardSongName: $cardSongName,
-                               cardArtist: $cardArtist,
-                               cardImageUrl: $cardImageUrl
-                    )
+//                    
+//                    SearchCard(albumName: "teste", name: "teste", artist: "teste", imageUrl: URL(string: ""), showNewModal: $showNewModal,
+//                               cardAlbumName: $cardAlbumName,
+//                               cardSongName: $cardSongName,
+//                               cardArtist: $cardArtist,
+//                               cardImageUrl: $cardImageUrl
+//                    )
+//                    SearchCard(albumName: "teste2", name: "teste2", artist: "teste2", imageUrl: URL(string: ""), showNewModal: $showNewModal,
+//                               cardAlbumName: $cardAlbumName,
+//                               cardSongName: $cardSongName,
+//                               cardArtist: $cardArtist,
+//                               cardImageUrl: $cardImageUrl
+//                    )
                 }
             }
         }

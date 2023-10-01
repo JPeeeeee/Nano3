@@ -24,34 +24,55 @@ struct SelectedCollectionView: View {
     var body: some View {
         VStack {
             ScrollView (showsIndicators: false) {
+                
+                HStack {
+                    Text("Your Albuns")
+                        .font(.title)
+                        .fontWeight(.black)
+                        .foregroundStyle(.white)
+                    
+                    Spacer()
+                    
+                    NavigationLink {
+                       SearchModal()
+                    } label: {
+                        HStack {
+                            Text("Add")
+                            Image(systemName: "plus")
+                        }
+                        .foregroundColor(.blue)
+                    }
+                }
+                .padding()
+                
                 LazyVGrid(columns: columns) {
                     ForEach(0..<currentAlbumArr.count, id: \.self) { i in
-                        AlbumCard(rating: currentAlbumArr[i].rating, albumName: currentAlbumArr[i].name, imageUrl: currentAlbumArr[i].imageUrl)
+                        AlbumCard(rating: currentAlbumArr[i].rating, albumName: currentAlbumArr[i].name, imageUrl: currentAlbumArr[i].imageUrl, artist: currentAlbumArr[i].artist, cardIndex: i)
                     }
-                    
+                    AlbumCard(rating: 0.0, artist: "artista", cardIndex: 0)
                 }
                 .padding()
                 Spacer()
             }
         }
-        .navigationTitle("Your albuns")
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             collectionManager.currentColletion = name
             currentAlbumArr = collectionManager.collections[collectionManager.currentColletion]!.albuns
         }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink {
-                   SearchModal()
-                } label: {
-                    HStack {
-                        Text("Search")
-                        Image(systemName: "plus")
-                    }
-                    .foregroundColor(.blue)
-                }
-            }
-        }
+//        .toolbar {
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                NavigationLink {
+//                   SearchModal()
+//                } label: {
+//                    HStack {
+//                        Text("Add")
+//                        Image(systemName: "plus")
+//                    }
+//                    .foregroundColor(.blue)
+//                }
+//            }
+//        }
     }
 }
 
