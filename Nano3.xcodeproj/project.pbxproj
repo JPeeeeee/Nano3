@@ -7,18 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A2D0361FA2D8F03A68473F5 /* Pods_Nano3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FF32D1FAF52B18AEDC1A73 /* Pods_Nano3.framework */; };
 		7C3643AA2AC1B4480058B90F /* Nano3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3643A92AC1B4480058B90F /* Nano3App.swift */; };
 		7C3643AC2AC1B4480058B90F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3643AB2AC1B4480058B90F /* ContentView.swift */; };
 		7C3643AE2AC1B4490058B90F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C3643AD2AC1B4490058B90F /* Assets.xcassets */; };
 		7C3643B12AC1B4490058B90F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C3643B02AC1B4490058B90F /* Preview Assets.xcassets */; };
+		7C3643B92AC1BFB90058B90F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3643B82AC1BFB90058B90F /* HomeView.swift */; };
+		7C4A72802AC76C7D005FC3F7 /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4A727F2AC76C7D005FC3F7 /* AlbumDetailView.swift */; };
+		7C9BFC412AC50F8D001494B8 /* splashart.riv in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BFC402AC50F8C001494B8 /* splashart.riv */; };
+		7C9BFC492AC5B36C001494B8 /* CollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BFC482AC5B36C001494B8 /* CollectionManager.swift */; };
+		7C9BFC4B2AC5B884001494B8 /* SelectedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BFC4A2AC5B884001494B8 /* SelectedCollectionView.swift */; };
+		7C9BFC4D2AC5BCD5001494B8 /* NewCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BFC4C2AC5BCD5001494B8 /* NewCollectionView.swift */; };
+		7C9BFC512AC6E7AD001494B8 /* AlbumCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BFC502AC6E7AD001494B8 /* AlbumCard.swift */; };
+		7C9BFC532AC70A95001494B8 /* NewAlbumModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BFC522AC70A95001494B8 /* NewAlbumModal.swift */; };
+		7CB3FB442AC1CD38004BFE72 /* AlbunsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB3FB432AC1CD38004BFE72 /* AlbunsModel.swift */; };
+		7CB3FB472AC1CD4B004BFE72 /* CollectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB3FB462AC1CD4B004BFE72 /* CollectionCard.swift */; };
+		7CB3FB492AC1F514004BFE72 /* SearchModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB3FB482AC1F514004BFE72 /* SearchModal.swift */; };
+		7CBBEC9E2AC31C5400490AE8 /* SearchCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBEC9D2AC31C5400490AE8 /* SearchCard.swift */; };
+		7CE109542AC4726600472EAF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE109532AC4726600472EAF /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29FF32D1FAF52B18AEDC1A73 /* Pods_Nano3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nano3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C3643A62AC1B4480058B90F /* Nano3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C3643A92AC1B4480058B90F /* Nano3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano3App.swift; sourceTree = "<group>"; };
 		7C3643AB2AC1B4480058B90F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7C3643AD2AC1B4490058B90F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C3643B02AC1B4490058B90F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7C3643B82AC1BFB90058B90F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7C4A727F2AC76C7D005FC3F7 /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
+		7C9BFC402AC50F8C001494B8 /* splashart.riv */ = {isa = PBXFileReference; lastKnownFileType = file; name = splashart.riv; path = ../../../../Downloads/splashart.riv; sourceTree = "<group>"; };
+		7C9BFC482AC5B36C001494B8 /* CollectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionManager.swift; sourceTree = "<group>"; };
+		7C9BFC4A2AC5B884001494B8 /* SelectedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCollectionView.swift; sourceTree = "<group>"; };
+		7C9BFC4C2AC5BCD5001494B8 /* NewCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionView.swift; sourceTree = "<group>"; };
+		7C9BFC502AC6E7AD001494B8 /* AlbumCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCard.swift; sourceTree = "<group>"; };
+		7C9BFC522AC70A95001494B8 /* NewAlbumModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlbumModal.swift; sourceTree = "<group>"; };
+		7CB3FB432AC1CD38004BFE72 /* AlbunsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbunsModel.swift; sourceTree = "<group>"; };
+		7CB3FB462AC1CD4B004BFE72 /* CollectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCard.swift; sourceTree = "<group>"; };
+		7CB3FB482AC1F514004BFE72 /* SearchModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModal.swift; sourceTree = "<group>"; };
+		7CBBEC9D2AC31C5400490AE8 /* SearchCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCard.swift; sourceTree = "<group>"; };
+		7CE109532AC4726600472EAF /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		90BF224A7ED8C042D71344FE /* Pods-Nano3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nano3.debug.xcconfig"; path = "Target Support Files/Pods-Nano3/Pods-Nano3.debug.xcconfig"; sourceTree = "<group>"; };
+		AC10B6A8767191D88C11176F /* Pods-Nano3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nano3.release.xcconfig"; path = "Target Support Files/Pods-Nano3/Pods-Nano3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +56,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2D0361FA2D8F03A68473F5 /* Pods_Nano3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14EEFB942FC4DFDA87E8443F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90BF224A7ED8C042D71344FE /* Pods-Nano3.debug.xcconfig */,
+				AC10B6A8767191D88C11176F /* Pods-Nano3.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3CEE47578FFBE56513DD969C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29FF32D1FAF52B18AEDC1A73 /* Pods_Nano3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7C36439D2AC1B4480058B90F = {
 			isa = PBXGroup;
 			children = (
 				7C3643A82AC1B4480058B90F /* Nano3 */,
 				7C3643A72AC1B4480058B90F /* Products */,
+				14EEFB942FC4DFDA87E8443F /* Pods */,
+				3CEE47578FFBE56513DD969C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,9 +101,14 @@
 		7C3643A82AC1B4480058B90F /* Nano3 */ = {
 			isa = PBXGroup;
 			children = (
+				7CB3FB4A2AC1F5C0004BFE72 /* Managers */,
+				7CB3FB452AC1CD3F004BFE72 /* Components */,
+				7CB3FB422AC1CD1C004BFE72 /* Models */,
+				7C3643B72AC1BE010058B90F /* Views */,
 				7C3643A92AC1B4480058B90F /* Nano3App.swift */,
 				7C3643AB2AC1B4480058B90F /* ContentView.swift */,
 				7C3643AD2AC1B4490058B90F /* Assets.xcassets */,
+				7C9BFC402AC50F8C001494B8 /* splashart.riv */,
 				7C3643AF2AC1B4490058B90F /* Preview Content */,
 			);
 			path = Nano3;
@@ -67,6 +122,46 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7C3643B72AC1BE010058B90F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7C3643B82AC1BFB90058B90F /* HomeView.swift */,
+				7C4A727F2AC76C7D005FC3F7 /* AlbumDetailView.swift */,
+				7CB3FB482AC1F514004BFE72 /* SearchModal.swift */,
+				7CE109532AC4726600472EAF /* SplashView.swift */,
+				7C9BFC4A2AC5B884001494B8 /* SelectedCollectionView.swift */,
+				7C9BFC4C2AC5BCD5001494B8 /* NewCollectionView.swift */,
+				7C9BFC522AC70A95001494B8 /* NewAlbumModal.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7CB3FB422AC1CD1C004BFE72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7CB3FB432AC1CD38004BFE72 /* AlbunsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7CB3FB452AC1CD3F004BFE72 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7CB3FB462AC1CD4B004BFE72 /* CollectionCard.swift */,
+				7CBBEC9D2AC31C5400490AE8 /* SearchCard.swift */,
+				7C9BFC502AC6E7AD001494B8 /* AlbumCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7CB3FB4A2AC1F5C0004BFE72 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7C9BFC482AC5B36C001494B8 /* CollectionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +169,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C3643B42AC1B4490058B90F /* Build configuration list for PBXNativeTarget "Nano3" */;
 			buildPhases = (
+				4D44512DB10456B8930B5790 /* [CP] Check Pods Manifest.lock */,
 				7C3643A22AC1B4480058B90F /* Sources */,
 				7C3643A32AC1B4480058B90F /* Frameworks */,
 				7C3643A42AC1B4480058B90F /* Resources */,
+				136AD89966D74D7BF31E1784 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Nano3;
+			packageProductDependencies = (
+			);
 			productName = Nano3;
 			productReference = 7C3643A62AC1B4480058B90F /* Nano3.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +210,8 @@
 				Base,
 			);
 			mainGroup = 7C36439D2AC1B4480058B90F;
+			packageReferences = (
+			);
 			productRefGroup = 7C3643A72AC1B4480058B90F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,19 +227,74 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C3643B12AC1B4490058B90F /* Preview Assets.xcassets in Resources */,
+				7C9BFC412AC50F8D001494B8 /* splashart.riv in Resources */,
 				7C3643AE2AC1B4490058B90F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		136AD89966D74D7BF31E1784 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nano3/Pods-Nano3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nano3/Pods-Nano3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nano3/Pods-Nano3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D44512DB10456B8930B5790 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nano3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C3643A22AC1B4480058B90F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB3FB492AC1F514004BFE72 /* SearchModal.swift in Sources */,
+				7C9BFC532AC70A95001494B8 /* NewAlbumModal.swift in Sources */,
+				7C9BFC512AC6E7AD001494B8 /* AlbumCard.swift in Sources */,
+				7C3643B92AC1BFB90058B90F /* HomeView.swift in Sources */,
+				7C9BFC4B2AC5B884001494B8 /* SelectedCollectionView.swift in Sources */,
+				7C4A72802AC76C7D005FC3F7 /* AlbumDetailView.swift in Sources */,
+				7CBBEC9E2AC31C5400490AE8 /* SearchCard.swift in Sources */,
+				7C9BFC4D2AC5BCD5001494B8 /* NewCollectionView.swift in Sources */,
 				7C3643AC2AC1B4480058B90F /* ContentView.swift in Sources */,
+				7C9BFC492AC5B36C001494B8 /* CollectionManager.swift in Sources */,
+				7CB3FB472AC1CD4B004BFE72 /* CollectionCard.swift in Sources */,
+				7CB3FB442AC1CD38004BFE72 /* AlbunsModel.swift in Sources */,
 				7C3643AA2AC1B4480058B90F /* Nano3App.swift in Sources */,
+				7CE109542AC4726600472EAF /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +417,7 @@
 		};
 		7C3643B52AC1B4490058B90F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90BF224A7ED8C042D71344FE /* Pods-Nano3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -270,6 +427,7 @@
 				DEVELOPMENT_TEAM = XN8Z23SQH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Please allow access to continue.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -290,6 +448,7 @@
 		};
 		7C3643B62AC1B4490058B90F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC10B6A8767191D88C11176F /* Pods-Nano3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,6 +458,7 @@
 				DEVELOPMENT_TEAM = XN8Z23SQH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Please allow access to continue.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

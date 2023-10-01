@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var collections: CollectionManager = CollectionManager()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        HomeView()
+            .preferredColorScheme(.dark)
+            .environmentObject(collections)
     }
 }
 
